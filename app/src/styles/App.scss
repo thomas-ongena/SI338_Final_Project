@@ -1,0 +1,13 @@
+@import './constants';
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  margin-top: $HEADER_HEIGHT;
+  .main {
+    flex: 1 0 auto;
+  }
+}

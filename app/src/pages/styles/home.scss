@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+@import '../../styles/constants';
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.nav-section {
+  scroll-margin-top: $HEADER_HEIGHT;
+}
+
+.home-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.home-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.home-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 3rem;
+  background: linear-gradient(to right, rgba(5, 57, 107, 0.85) 60%, transparent);
+  color: white;
+}
+
+.home-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  margin-top: 0;
+  font-family: 'Montserrat', sans-serif, Arial;
+  font-weight: bolder;
+  line-height: 1.1;
+}
+
+.home-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  letter-spacing: 0.25%;
+}
+
+@media (max-width: 768px) {
+  .home-text {
+    width: 100%;
+    background: rgba(5, 57, 107, 0.75);
+  }
+}
+
+.about-container {
+  padding: 2rem 1rem;
+}
+
+.about-h2 {
+  font-family: 'Montserrat', sans-serif, Arial;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #05396b;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.pillar-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 0 4rem 2rem;
+}
+
+.pillar {
+  display: flex;
+  flex-direction: column;
+}
+
+.pillar-title {
+  font-family: 'Montserrat', sans-serif, Arial;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #05396b;
+  text-align: center;
+  margin-bottom: 0.75rem;
+  margin-top: 0;
+}
+
+.pillar-box {
+  background-color: #05396b;
+  border-radius: 12px;
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.pillar-box p {
+  color: white;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .pillar-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1.5rem 2rem;
+  }
+}
+
+  .about-text,
+  .about-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+
+  .factory,
+  .code {
+    height: calc(50% - 1rem);
+  }
+
+  .factory img,
+  .code img {
+    border-radius: 2%;
+  }
+
+/* Services Section */
+
+.services-h2 {
+  font-family: 'Montserrat', sans-serif, Arial;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #05396B;
+}
+
+.services-container {
+  padding: 1rem;
+  background-color: #f5f5f5;
+}
+
+.service-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: row;
+  overflow-wrap: normal;
+  width: 75%;
+  background-color: #f5f5f5;
+}
+
+/* For smaller screens */
+@media (max-width: 800px) {
+  .service-card {
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center align content */
+  }
+
+  .service-card-image {
+    width: 50%; /* Ensure the image takes up the full width */
+    margin-bottom: 0.5rem; /* Add space between image and text */
+  }
+
+  .service-card-content {
+    text-align: center; /* Center text content */
+    padding: 0 1rem; /* Adjust padding for better spacing */
+  }
+}
+
+.service-card-content {
+  flex: 0 0 75%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.service-card-content h3 {
+  font-family: 'Montserrat', sans-serif, Arial;
+  font-size: 1.25rem;
+  font-weight: bolder;
+  color: #05396B;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.service-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #05396B;
+}
+
+.service-card-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 8px;
+}
+
+.service-card-image img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 5%;
+}
+
+.services-tabs {
+  display: flex;
+  justify-content: center;
+}
+
+.tab {
+  width: 20%;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #05396b;
+  background-color: #f0f0f0;
+  border: solid;
+  border-color: #05396b;
+  border-width: 0.1rem;
+  border-radius: 1%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  display: inline-block;
+}
+
+@media (max-width: 500px) {
+  .services-tabs {
+    display: flex;
+    width: 100%;
+  }
+
+  .tab {
+    flex: 1;
+    width: auto;
+    min-width: 0;
+    text-align: center;
+  }
+}
+
+.tab:hover {
+  background-color: #e0e0e0;
+}
+
+.tab.active {
+  background-color: #05396b;
+  color: white;
+}
+
+
+/* Value Delivered Section */
+.value-container {
+  padding: 2rem 1rem;
+  background-color: white;
+}
+
+.value-h2 {
+  font-family: 'Montserrat', sans-serif, Arial;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #05396b;
+}
+
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 0 2rem 2rem;
+}
+
+.value-card {
+  position: relative;
+  height: 320px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.value-card-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.value-card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(5, 57, 107, 0.88);
+  padding: 1rem 1.25rem;
+  border-radius: 0 0 12px 12px;
+}
+
+.value-card-content h3 {
+  color: white;
+  font-family: 'Montserrat', sans-serif, Arial;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.value-card-content p {
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .value-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .value-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Footer Section */
+
+.footer {
+  background-color: #05396b;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+  color: white;
+}
+
+.contact-section {
+  text-align: left;
+}
+
+.contact-section a {
+  color: white;
+}

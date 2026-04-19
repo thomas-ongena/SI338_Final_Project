@@ -1,0 +1,48 @@
+table {
+  border-collapse: collapse;
+  width: 75%;
+  table-layout: fixed;
+}
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  word-wrap: break-word; /* Allows text to wrap to the next line */
+  overflow: visible; /* Ensure overflow is visible */
+  white-space: normal; /* Allow wrapping of text */
+}
+th {
+  background-color: #f2f2f2;
+}
+
+/* Set widths for columns using nth-child */
+th:nth-child(1),
+td:nth-child(1) {
+  width: 10%; /* First column */
+}
+
+#button-column {
+  width: 11%;
+}
+
+// Style every other row
+tr:nth-child(odd) {
+  background-color: #ffffff; // White
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9; // Light gray
+}
+
+// /* Set fixed widths for each column */
+// th,
+// td {
+//   width: 200px; /* Example: set each column to a fixed width of 200px */
+// }
+textarea {
+  width: 100%; /* Make input field take up full width of the cell */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+  resize: vertical; /* Allow vertical resizing of textarea */
+  min-height: 40px; /* Minimum height for the textarea */
+}

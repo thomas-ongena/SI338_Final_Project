@@ -1,0 +1,68 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html"
+  },
+  "responseOverrides": {
+    "401": {
+      "statusCode": 302,
+      "redirect": "/.auth/login/aad?post_login_redirect_uri=.referrer"
+    },
+    "403": {
+      "rewrite": "/unauthorized"
+    }
+  },
+  "routes": [
+    {
+      "route": "/api/manage/*",
+      "allowedRoles": ["admin"]
+    },
+    {
+      "route": "/api/*",
+      "allowedRoles": ["authenticated"]
+    },
+    {
+      "route": "/.auth/login/github",
+      "statusCode": 404
+    },
+    {
+      "route": "/login",
+      "redirect": "/.auth/login/aad?post_login_redirect_uri=/viewTools"
+    },
+    {
+      "route": "/logout",
+      "redirect": "/.auth/logout?post_logout_redirect_uri=/"
+    },
+    {
+      "route": "/admin*",
+      "allowedRoles": ["admin"]
+    },
+    {
+      "route": "/viewTools*",
+      "allowedRoles": ["authenticated"]
+    },
+    {
+      "route": "/about-us*",
+      "redirect": "/#about-us",
+      "statusCode": 301
+    },
+    {
+      "route": "/services*",
+      "redirect": "/#services",
+      "statusCode": 301
+    },
+    {
+      "route": "/value-delivered*",
+      "redirect": "/#value-delivered",
+      "statusCode": 301
+    },
+    {
+      "route": "/contact-us*",
+      "redirect": "/#contact-us",
+      "statusCode": 301
+    },
+    {
+      "route": "/*",
+      "allowedRoles": ["anonymous"]
+    }
+  ]
+}

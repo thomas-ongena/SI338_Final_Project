@@ -1,0 +1,11 @@
+.ant-row {
+  width: 100%; /* Ensure the row spans the full width */
+  margin-bottom: 20px; /* Optional: space between rows */
+}
+
+.ant-col {
+  display: flex; /* Ensure flex display for each column */
+  justify-content: center; /* Horizontally center content inside the column */
+  align-items: center; /* Vertically center content inside the column */
+  text-align: center; /* Optional: Center text inside the column */
+}
