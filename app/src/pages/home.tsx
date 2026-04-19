@@ -67,74 +67,90 @@ const Home: React.FC = () => {
           </section>
         </div>
 
-        <div className="about-container nav-section" id={VALUE_ID}>
-          {valueCards.map((card, index) => (
-            <div key={index} className="value-card">
-              <img src={card.image} alt={card.title} className="value-card-bg" />
-              <div className="value-card-content">
-                <h3>{card.title}</h3>
-                <p>{card.description}</p>
-              </div>
+        <div className="value-container nav-section" id={VALUE_ID}>
+          <section>
+            <h2 className="value-h2">{strings.valueDelivered.title}</h2>
+            <div className="value-grid">
+              {valueCards.map((card, index) => (
+                <div key={index} className="value-card">
+                  <img src={card.image} alt={card.title} className="value-card-bg" />
+                  <div className="value-card-content">
+                    <h3>{card.title}</h3>
+                    <p>{card.description}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </section>
         </div>
 
         <div className="about-container nav-section" id={ABOUT_ID}>
           <h2 className="about-h2">{strings.aboutUs.title}</h2>
-          <div className="pillar-grid">
-            <div className="pillar">
-              <h3 className="pillar-title">{strings.aboutUs.pillar1.title}</h3>
-              <div className="pillar-box">
+          <div className="values-list">
+            <div className="value-row">
+              <h3 className="value-row-title">{strings.aboutUs.pillar1.title}</h3>
+              <div className="value-row-box">
                 <p>{strings.aboutUs.pillar1.text}</p>
               </div>
             </div>
-            <div className="pillar">
-              <h3 className="pillar-title">{strings.aboutUs.pillar2.title}</h3>
-              <div className="pillar-box">
+            <div className="value-row">
+              <h3 className="value-row-title">{strings.aboutUs.pillar2.title}</h3>
+              <div className="value-row-box">
                 <p>{strings.aboutUs.pillar2.text}</p>
               </div>
             </div>
-            <div className="pillar">
-              <h3 className="pillar-title">{strings.aboutUs.pillar3.title}</h3>
-              <div className="pillar-box">
+            <div className="value-row">
+              <h3 className="value-row-title">{strings.aboutUs.pillar3.title}</h3>
+              <div className="value-row-box">
                 <p>{strings.aboutUs.pillar3.text}</p>
               </div>
             </div>
           </div>
         </div>
 
-              <footer className="footer">
-        <div className="footer-container">
-            <section className="contact-section nav-section" id={CONTACT_ID}>
-              <div>
-                📞 <a href={`tel:${strings.contact.phone}`}>{strings.contact.phone}</a>
-              </div>
-              <div className="linkedin-link">
-                <img
-                  src={require('../assets/linkedIn.png')}
-                  alt="LinkedIn"
-                  className="linkedin-icon"
-                  style={{ height: '16px', width: '16px' }}
-                />{' '}
-                <a
-                  href="https://www.linkedin.com/company/tooling-management-group"
-                  target="_blank"
-                  rel="noopener·noreferrer"
-                >
-                  Join us on LinkedIn
-                </a>
-              </div>
-              <div>
-                ✉️ <a href={strings.contact.emailLink}>{strings.contact.email}</a>
-              </div>
-              <div>{strings.contact.address}</div>
-            </section>
-            <div className="footer-info">
-              <h3>{strings.footer.company}</h3>
-              <p>{strings.footer.copyright}</p>
+
+      <footer className="footer">
+        <div className="footer-contact nav-section" id={CONTACT_ID}>
+          <h2 className="footer-contact-h2">Contact Us</h2>
+          <p className="footer-contact-tagline">{strings.contact.tagline}</p>
+          <div className="footer-contact-cards">
+            <div className="footer-contact-card">
+              <span className="footer-contact-icon">✉️</span>
+              <p className="footer-contact-label">Email</p>
+              <p className="footer-contact-name">{strings.contact.name}</p>
+              <p className="footer-contact-role">{strings.contact.role}</p>
+              <a href={strings.contact.emailLink} className="footer-contact-link">
+                Contact Us
+              </a>
+            </div>
+            <div className="footer-contact-card">
+              <img
+                src={require('../assets/linkedIn.png')}
+                alt="LinkedIn"
+                className="footer-contact-icon-img"
+              />
+              <p className="footer-contact-label">LinkedIn</p>
+              
+                <a href="https://www.linkedin.com/company/tooling-management-group"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-contact-link"
+              >
+                Join us on LinkedIn
+              </a>
+            </div>
+            <div className="footer-contact-card">
+              <span className="footer-contact-icon">📍</span>
+              <p className="footer-contact-label">Location</p>
+              <p className="footer-contact-address">{strings.contact.address}</p>
             </div>
           </div>
-        </footer>
+        </div>
+        <div className="footer-bottom">
+          <p>{strings.footer.company} &nbsp;|&nbsp; {strings.footer.copyright}</p>
+        </div>
+      </footer>
+
       </div>
     </div>
   );
