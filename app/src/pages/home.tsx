@@ -32,7 +32,7 @@ const Home: React.FC = () => {
     <div className="site-wrapper">
       <div className="content-container nav-section" id={HOME_ID}>
         <div className="home-container">
-          <img className="home-bg-image" src={require('../assets/tmg_first_page.jpg')} alt="Warehouse with tools" />
+          <img className="home-bg-image" src={require('../assets/tmg_first_page.jpg')} alt="Futuristic network background" />
           <div className="home-text">
             <h1>{strings.home.title}</h1>
             <p>{strings.home.description1}</p>
@@ -73,7 +73,7 @@ const Home: React.FC = () => {
             <div className="value-grid">
               {valueCards.map((card, index) => (
                 <div key={index} className="value-card">
-                  <img src={card.image} alt={card.title} className="value-card-bg" />
+                  <img src={card.image} alt="{card.title} background" className="value-card-bg" />
                   <div className="value-card-content">
                     <h3>{card.title}</h3>
                     <p>{card.description}</p>
@@ -123,7 +123,7 @@ const Home: React.FC = () => {
                 </a>
               </div>
               <div className="footer-contact-card">
-                <img src={require('../assets/linkedIn.png')} alt="LinkedIn" className="footer-contact-icon-img" />
+                <img src={require('../assets/linkedIn.png')} alt="LinkedIn Logo" className="footer-contact-icon-img" />
                 <p className="footer-contact-label">LinkedIn</p>
 
                 <a

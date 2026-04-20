@@ -92,9 +92,15 @@
     }
   }
 
-  @media (max-width: 550px) {
+  /* Mobile first: hide all nav buttons except the last (Login) */
+  .nav-links button:not(:last-child) {
+    display: none;
+  }
+ 
+  /* Desktop: show all nav buttons */
+  @media (min-width: 551px) {
     .nav-links button:not(:last-child) {
-      display: none;
+      display: inline-block;
     }
   }
 }
