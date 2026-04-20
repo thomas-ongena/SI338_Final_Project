@@ -67,12 +67,9 @@ const Header: React.FC = () => {
           <button onClick={() => handleNavClick(VALUE_ID)}>Value Delivered</button>
           <button onClick={() => handleNavClick(ABOUT_ID)}>About</button>
           <button onClick={() => handleNavClick(CONTACT_ID)}>Contact</button>
-         <button
-          className="login-btn"
-          onClick={() => (window.location.href = 'https://portal.toolingmanagementgroup.com')}
-        >
-          Login
-        </button>
+          <button className="login-btn" onClick={() => (window.location.href = 'https://portal.toolingmanagementgroup.com')}>
+            Login
+          </button>
           {/* {siteLogin()} */}
         </nav>
       </div>

@@ -37,7 +37,7 @@ export const services: serviceType[] = [
   {
     title: 'Lifecycle Management',
     description:
-      "As tools age in production, the gap between current condition and end-of-warranty grows harder to track, especially across thousands of tools at hundreds of supplier sites. TMG monitors the full lifecycle of your tooling assets, tracking warranty capacity, production demand, condition assessments, and service change requests to calculate when each tool will reach end-of-useful-life. This proactive approach gives your team the lead time to plan replacements or refurbishments before a tool failure disrupts production. ",
+      'As tools age in production, the gap between current condition and end-of-warranty grows harder to track, especially across thousands of tools at hundreds of supplier sites. TMG monitors the full lifecycle of your tooling assets, tracking warranty capacity, production demand, condition assessments, and service change requests to calculate when each tool will reach end-of-useful-life. This proactive approach gives your team the lead time to plan replacements or refurbishments before a tool failure disrupts production. ',
     type: 'Technology Offerings',
     image: require('../assets/storeroom.png'),
   },
@@ -51,7 +51,7 @@ export const services: serviceType[] = [
   {
     title: 'Trucking',
     description:
-      "Moving tooling assets between supplier sites, OEM facilities, and warehouses sounds straightforward until a missed pickup stalls a disposition approval or a mislabeled shipment creates a compliance gap. TMG coordinates the full transportation chain for tooling moves: scheduling pickups, managing carriers, handling shipping documentation, and processing weight tickets for scrap loads. Every move is tracked and tied back to the relevant tool records in ToolSight, so nothing gets lost in transit and every shipment produces an auditable paper trail your team can rely on. ",
+      'Moving tooling assets between supplier sites, OEM facilities, and warehouses sounds straightforward until a missed pickup stalls a disposition approval or a mislabeled shipment creates a compliance gap. TMG coordinates the full transportation chain for tooling moves: scheduling pickups, managing carriers, handling shipping documentation, and processing weight tickets for scrap loads. Every move is tracked and tied back to the relevant tool records in ToolSight, so nothing gets lost in transit and every shipment produces an auditable paper trail your team can rely on. ',
     type: 'On Site Solutions',
     image: require('../assets/trucking.jpg'),
   },
@@ -65,9 +65,8 @@ export const services: serviceType[] = [
   {
     title: 'Service Tool Part Supply',
     description:
-      "When a service part order arrives and the original production supplier is no longer viable, OEMs face the difficult task of sourcing low-volume, short-run production with little lead time and limited supplier visibility. TMG steps in as supplier of record, managing service part production through its established network of Tier 2 and Tier 3 suppliers, handling quality control, production coordination, and OEM compliance requirements from initial order through final delivery. At end of product lifecycle, TMG manages all related disposal processes and documentation, so the program closes cleanly without loose ends in your supply chain.",
+      'When a service part order arrives and the original production supplier is no longer viable, OEMs face the difficult task of sourcing low-volume, short-run production with little lead time and limited supplier visibility. TMG steps in as supplier of record, managing service part production through its established network of Tier 2 and Tier 3 suppliers, handling quality control, production coordination, and OEM compliance requirements from initial order through final delivery. At end of product lifecycle, TMG manages all related disposal processes and documentation, so the program closes cleanly without loose ends in your supply chain.',
     type: 'On Site Solutions',
     image: require('../assets/empty_factory.png'),
   },
-  
 ];

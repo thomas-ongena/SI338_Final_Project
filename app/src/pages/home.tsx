@@ -34,10 +34,10 @@ const Home: React.FC = () => {
         <div className="home-container">
           <img className="home-bg-image" src={require('../assets/tmg_first_page.jpg')} alt="Warehouse with tools" />
           <div className="home-text">
-              <h1>{strings.home.title}</h1>
-              <p>{strings.home.description1}</p>
-              <p>{strings.home.description2}</p>
-            </div>
+            <h1>{strings.home.title}</h1>
+            <p>{strings.home.description1}</p>
+            <p>{strings.home.description2}</p>
+          </div>
         </div>
 
         <div className="services-container nav-section" id={SERVICES_ID}>
@@ -108,49 +108,46 @@ const Home: React.FC = () => {
           </div>
         </div>
 
+        <footer className="footer">
+          <div className="footer-contact nav-section" id={CONTACT_ID}>
+            <h2 className="footer-contact-h2">Contact Us</h2>
+            <p className="footer-contact-tagline">{strings.contact.tagline}</p>
+            <div className="footer-contact-cards">
+              <div className="footer-contact-card">
+                <span className="footer-contact-icon">✉️</span>
+                <p className="footer-contact-label">Email</p>
+                <p className="footer-contact-name">{strings.contact.name}</p>
+                <p className="footer-contact-role">{strings.contact.role}</p>
+                <a href={strings.contact.emailLink} className="footer-contact-link">
+                  Contact Us
+                </a>
+              </div>
+              <div className="footer-contact-card">
+                <img src={require('../assets/linkedIn.png')} alt="LinkedIn" className="footer-contact-icon-img" />
+                <p className="footer-contact-label">LinkedIn</p>
 
-      <footer className="footer">
-        <div className="footer-contact nav-section" id={CONTACT_ID}>
-          <h2 className="footer-contact-h2">Contact Us</h2>
-          <p className="footer-contact-tagline">{strings.contact.tagline}</p>
-          <div className="footer-contact-cards">
-            <div className="footer-contact-card">
-              <span className="footer-contact-icon">✉️</span>
-              <p className="footer-contact-label">Email</p>
-              <p className="footer-contact-name">{strings.contact.name}</p>
-              <p className="footer-contact-role">{strings.contact.role}</p>
-              <a href={strings.contact.emailLink} className="footer-contact-link">
-                Contact Us
-              </a>
-            </div>
-            <div className="footer-contact-card">
-              <img
-                src={require('../assets/linkedIn.png')}
-                alt="LinkedIn"
-                className="footer-contact-icon-img"
-              />
-              <p className="footer-contact-label">LinkedIn</p>
-              
-                <a href="https://www.linkedin.com/company/tooling-management-group"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer-contact-link"
-              >
-                Join us on LinkedIn
-              </a>
-            </div>
-            <div className="footer-contact-card">
-              <span className="footer-contact-icon">📍</span>
-              <p className="footer-contact-label">Location</p>
-              <p className="footer-contact-address">{strings.contact.address}</p>
+                <a
+                  href="https://www.linkedin.com/company/tooling-management-group"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="footer-contact-link"
+                >
+                  Join us on LinkedIn
+                </a>
+              </div>
+              <div className="footer-contact-card">
+                <span className="footer-contact-icon">📍</span>
+                <p className="footer-contact-label">Location</p>
+                <p className="footer-contact-address">{strings.contact.address}</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="footer-bottom">
-          <p>{strings.footer.company} &nbsp;|&nbsp; {strings.footer.copyright}</p>
-        </div>
-      </footer>
-
+          <div className="footer-bottom">
+            <p>
+              {strings.footer.company} &nbsp;|&nbsp; {strings.footer.copyright}
+            </p>
+          </div>
+        </footer>
       </div>
     </div>
   );
