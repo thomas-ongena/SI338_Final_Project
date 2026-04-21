@@ -13,7 +13,7 @@ const App: React.FC = () => {
     <div className="app">
       <Router>
         <Header />
-        <div className="main">
+        <main className="main">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/admin" element={<Admin />} />
@@ -21,7 +21,7 @@ const App: React.FC = () => {
             <Route path="/viewTools/:locDun" element={<LocDunView />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </div>
+        </main>
       </Router>
     </div>
   );
