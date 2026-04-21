@@ -58,7 +58,7 @@ const Header: React.FC = () => {
   // );
 
   return (
-    <div className={`header ${shrink ? 'shrink' : ''}`}>
+    <header className={`header ${shrink ? 'shrink' : ''}`}>
       <div className="header-content">
         <img className="logo" src={require('../assets/TMGLogo.png')} alt="TMG Logo" />
         <nav className="nav-links">
@@ -73,7 +73,7 @@ const Header: React.FC = () => {
           {/* {siteLogin()} */}
         </nav>
       </div>
-    </div>
+    </header>
   );
 };
 
